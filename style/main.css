@@ -1,4 +1,7 @@
 body {
-  /*TODO Womp*/
   background-color: red;
+}
+
+.button {
+  border: 1px solid black;
 }
