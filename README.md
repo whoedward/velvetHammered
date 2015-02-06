@@ -1,8 +1,7 @@
 ## velvetHammered
-Alex Yang, Ethan Robison, Edward Hu, Michael Wang
+<p>Alex Yang, Ethan Robison, Edward Hu, Michael Wang</p>
 
-### "notes"
-This is a loose start for our readme; things should be hashed out in this form in only a <i>very</i> general sense.
+<!-- This is a loose start for our readme; things should be hashed out in this form in only a <i>very</i> general sense. -->
 
 ## "Table of Contents"
 
@@ -16,7 +15,10 @@ This is a loose start for our readme; things should be hashed out in this form i
 ## smartShots
 
 ### Objectives
-smartShots will...
+<p>smartShots will:</p>
+
+<!-- TODO problems that smartShots will solve, etc. -->
+<p>Encourage and enable safer alcohol consumption.</p>
 
 ### Features
 
@@ -34,7 +36,7 @@ smartShots will...
 <a>www.github.com/ethanCrobison/velvetHammered</a>
 
 ## Support
-Contact: tbd@someHost.com
+<p>Contact: tbd@someHost.com</p>
 
 ## License
-smartShots is licensed as...
+<p>smartShots is licensed as...</p>
