@@ -3,7 +3,7 @@
 
 <!-- This is a loose start for our readme; things should be hashed out in this form in only a <i>very</i> general sense. -->
 
-## "Table of Contents"
+## Contents
 
 <ul>
 <!--TODO relative links in file? -->
@@ -19,6 +19,7 @@
 
 <!-- TODO problems that smartShots will solve, etc. -->
 <p>Encourage and enable safer alcohol consumption.</p>
+<p>Help friends keep friends safe.</p>
 
 ### Features
 
