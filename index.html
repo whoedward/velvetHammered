@@ -5,17 +5,32 @@
 
 <head>
   <title>smartShots</title>
-        <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <link href="style/button.css" rel="stylesheet" type="text/css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <link href="style/button.css" rel="stylesheet" type="text/css">
 
 </head>
 
 
 <body>
+    
+    
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+        </ul>
+    </div>
+    
+    
     
     <div class="col-md-4 text-center"> 
         <button id="singlebutton" name="singlebutton" class="btn btn-primary glyphicon glyphicon-plus-sign"></button> 
@@ -26,7 +41,8 @@
 </body>
 
 <footer>
-    <script src = "js/button.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/menu.js"></script>
 </footer>
     
 </html>
