@@ -1,0 +1,9 @@
+#mainMenu {
+    position: fixed;
+    width: 100%;
+}
+
+#menuInternal {
+    position: relative;
+    float: right;
+}

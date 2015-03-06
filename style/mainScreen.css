@@ -5,12 +5,11 @@ body {
 
 #singlebutton{
     position:relative;
-    margin-top:45%;
+    margin-top:30%;
     padding:5% 7%;
     border-radius:50% 50%;
     box-shadow: 0 0  100px #888888;
     border:5px solid black;
-    outline-offset:1000px;
 }
 
 .glyphicon{
