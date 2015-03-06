@@ -11,6 +11,7 @@
 
 #menuList {
     border-radius: 5px;
+    border-color: inherit !important;
 }
 
 .list-group-item {
