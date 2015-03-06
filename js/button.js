@@ -1,3 +1,5 @@
+var targetDrinks = 0;
+
 $(document).ready(function () {
     $('#part2').hide();
     $('#forward').hide();
@@ -86,14 +88,14 @@ function calcDrinks() {
     var targetBAC = Number($('input[name=amount]:checked').val());
     console.log(targetBAC);     // DEBUG PURPOSES
 
-    var formula = 0.06 * 100 * 1.055 / weight * genderConstant;
-    var targetDrinks = targetBAC / formula;
-    targetDrinks = Math.round(targetDrinks);
+    var formula = 0.06 * 100 * (1.055 / weight) * genderConstant;
+    var targetDrinksTemp = targetBAC / formula;
+    targetDrinksTemp = Math.round(targetDrinksTemp);
 
-    $('#response').text("Limit yourself to " + targetDrinks + " drinks total. You can have 1 more per hour after that.")
+    $('#response').text("Limit yourself to " + targetDrinksTemp + " drinks total. You can have 1 more per hour after that.")
     $('#forward').show();
 
-    
+    targetDrinks = targetDrinksTemp;
 }
 
 $('#forward').click(function() {
