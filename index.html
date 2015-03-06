@@ -2,13 +2,8 @@
 <!-- 2015 Alex Yang, Ethan Robison, Edward Hu, Michael Wang -->
 <html>
 
-
 <head>
   <title>smartShots</title>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!--  Bootstrap js  -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     
@@ -17,79 +12,135 @@
 
 </head>
 
-
 <body>
-    
-    <nav id="mainMenu" class="navbar navbar-default navbar-static-top">
-        <div id="menuInternal" class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuList">
-                    <span class="sr-only">Toggle navigation</span>
-                    <!-- hamburger effect -->
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+    <!-- PART 1 -->
+    <div id='part1'>
+        <div class='container'>
+            <h1 class='title'>smartShots</h1>
+            <form id='userForm'>
+              <div class="form-group">
+                <label for="height">Height</label>
+                <div>
+                    <input type="number" class="form-control" id="height" placeholder="Feet (e.g. 5)" value="" required>
+                </div>
+                <div>
+                    <input type="number" class="form-control" id="height-inches" placeholder="Inches (e.g. 9)" value="" required>
+                </div>
+              </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="menuList">
-                <ul class="nav navbar-nav">
-                    
-                    <li><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Emergency Contacts</a>
-                        <ul id="contactList" class="dropdown-menu list-group" role="menu">
-                            <li class="list-group-item">
-                                <a href="#" role="button">
-                                    <span class="name">Jean Myers</span><br>
-                                    <span class="visible-xs"> <span class="text-muted">(477) 792-2822</span><br></span>
-                                </a>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" role="button">
-                                    <span class="name">Todd Shelton</span><br>
-                                    <span class="visible-xs"> <span class="text-muted">(522) 991-3367</span><br></span>
-                                </a>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" role="button">
-                                    <span class="name">Rosemary Porter</span><br>
-                                    <span class="visible-xs"> <span class="text-muted">(497) 160-9776</span><br></span>
-                                </a>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>    
-                    </li>
-                    
-                    <li><a role="button">Edit Info</a></li>
-                    <li><a role="button">Records</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    
-    
-    <div id="mainScreen">
-        <div class="col-lg-4 text-center">
-        <h1 id = "pop-up"></h1>
-        </div>
-        
-        <div class="col-lg-4 text-center"> 
-            
-            <button id="singlebutton" name="singlebutton" class="btn btn-primary glyphicon glyphicon-plus-sign"></button> 
-            <h3 id = "button-text"></h3>
-            <button class = "btn btn-primary" id = "undo">Undo</button>
-        </div>
+              <div class="form-group">
+                <label for="weight">Weight</label>
+                <div>
+                    <input type="number" class="form-control" id="weight" placeholder="Pounds (e.g. 125)" value required>
+                </div>
+              </div>
 
+              <label>Gender</label>
+              <div class="btn-group btn-group-justified form-group" data-toggle='buttons'>
+                <label class="btn btn-primary active">
+                    <input type="radio" name='sex' required value='m' checked>Male
+                  </label>
+                  <label class="btn btn-primary" id='btn-female'>
+                    <input type="radio" name='sex'value='f'>Female
+                  </label>
+                </div>
+
+                <label>How Drunk? (based on approximations)</label>
+              <div class="btn-group btn-group-justified form-group" data-toggle='buttons'>
+                <label class="btn btn-default btn-amount">
+                    <input type="radio" name='amount' required value='0.04'><span class='btn-heading'>Buzzed</span><br>
+                    (0.04 BAC)
+                  </label>
+                  <label class="btn btn-default active btn-amount">
+                    <input type="radio" name='amount' value='0.08'checked><span class='btn-heading'>Tipsy</span><br>
+                    (0.08 BAC)
+                  </label>
+                  <label class="btn btn-default btn-amount">
+                    <input type="radio" name='amount' value='0.12'><span class='btn-heading'>Drunk</span><br>
+                        (0.12 BAC)
+                  </label>
+                </div>
+
+                <button type='button' class='btn btn-success' onclick='calcDrinks()'>Calculate!</button>
+                <span id='response'></span>
+                <div><button type='button' id='forward' class='btn btn-success' onclick='transferData()'>Submit to Drink Tracker</button></div>
+            </form>
+        </div>
     </div>
 
-    
-    
-    
+    <!-- PART 2 -->
+    <div id='part2'>
+        <nav id="mainMenu" class="navbar navbar-default navbar-static-top">
+            <div id="menuInternal" class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuList">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- hamburger effect -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="menuList">
+                    <ul class="nav navbar-nav">
+                        
+                        <li><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Emergency Contacts</a>
+                            <ul id="contactList" class="dropdown-menu list-group" role="menu">
+                                <li class="list-group-item">
+                                    <a href="#" role="button">
+                                        <span class="name">Jean Myers</span><br>
+                                        <span class="visible-xs"> <span class="text-muted">(477) 792-2822</span><br></span>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" role="button">
+                                        <span class="name">Todd Shelton</span><br>
+                                        <span class="visible-xs"> <span class="text-muted">(522) 991-3367</span><br></span>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" role="button">
+                                        <span class="name">Rosemary Porter</span><br>
+                                        <span class="visible-xs"> <span class="text-muted">(497) 160-9776</span><br></span>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>    
+                        </li>
+                        
+                        <li><a role="button">Edit Info</a></li>
+                        <li><a role="button">Records</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+        
+        <div id="mainScreen">
+            <div class="col-lg-4 text-center">
+            <h1 id = "pop-up"></h1>
+            </div>
+            
+            <div class="col-lg-4 text-center"> 
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary glyphicon glyphicon-plus-sign"></button> 
+                <h3 id = "button-text"></h3>
+                <button class = "btn btn-primary" id = "undo">Undo</button>
+            </div>
+
+        </div>
+    </div>  
 </body>
 
 <footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--  Bootstrap js  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
     <script src="js/button.js"></script>
     <script src="js/menu.js"></script>
 </footer>

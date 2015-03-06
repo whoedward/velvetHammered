@@ -24,4 +24,34 @@ body {
 /*    display:block;*/
 }
 
+.title {
+    text-align: center;
+}
 
+#btn-female {
+    background-color: #FF69B4;
+    border-color: #FF69B4;
+}
+
+#btn-female:hover {
+    background-color: #E55EA2;
+    border-color: #E55EA2;
+}
+
+#btn-female:active {
+    background-color: #E55EA2;
+    border-color: #E55EA2;
+}
+
+.btn-heading {
+    font-style: italic;
+}
+
+#response {
+    margin-left: 1em;
+    font-weight: bold;
+}
+
+#forward {
+    margin-top: 1em;
+}
