@@ -18,6 +18,10 @@ body {
 #undo{
     margin-top:30px;   
 }
+#resetBtn{
+    margin-left:20px;
+    margin-top:20px;
+}
 #pop-up{
     position:fixed;
     margin-top:80%;
