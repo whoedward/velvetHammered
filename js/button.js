@@ -1,18 +1,16 @@
-$(document).ready(function(){
-    count = 0;
-    $("#singlebutton").click(function(){
+$(document).ready(function () {
+    "use strict";
+    var score = 1;  // 1 to 100 (calculated with user values)
+    var count = 0;
+    
+    var adjust = 10;    // amount that each drink increases score
+    
+    $("#singlebutton").click(function () {
         count++;
-        if(count <=5){
-            $("body").css("background-color", "#a20808");
-        }else if(count >5 && count <= 10){
-            $("body").css("background-color", "#8a0707");
-        }else if(count > 10 && count <=15){
-            $("body").css("background-color", "#720606");
-        }else if(count >15 && count <=20){
-            $("body").css("background-color", "#590505");
-        }else{
-            $("body").css("background-color", "#410303");
-        }    
+        score += adjust;
+        if (score > 100) { score = 100; }   // cap at 100
+        
+        $("body").css("background-color", "rgb(" + (255 - 2 * score) + "," + (255 - 3 * score) + "," + (255 - 3 * score) + ")");
         $("#button-text").html(count);
     });
 });
