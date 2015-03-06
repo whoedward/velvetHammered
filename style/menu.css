@@ -7,8 +7,11 @@
 #menuInternal {
     position: relative;
     float: right;
-    
 }
-.navbar-header{
-       
+
+#menuList {
+}
+
+#contactBin {
+    position: relative;
 }

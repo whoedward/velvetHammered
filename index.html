@@ -14,7 +14,6 @@
     
     <link href="style/menu.css" rel="stylesheet" type="text/css">
     <link href="style/mainScreen.css" rel="stylesheet" type="text/css">
-    <link href="style/contactBin.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -36,9 +35,37 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="menuList">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Contacts <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Edit Info</a></li>
-                    <li><a href="#">Records</a></li>
+                    <li><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Contacts<span class="caret"></span></a>
+                        <div class="collapse navbar-collapse" id="contactBin">
+                            <ul class="nav navbar-nav">
+                                <ul class="list-group" id="contact-list">
+                                    <li class="list-group-item">
+                                        <div class="col-xs-12 col-sm-9">
+                                            <span class="name">Jean Myers</span><br>
+                                            <span class="visible-xs"> <span class="text-muted">(477) 792-2822</span><br></span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="col-xs-12 col-sm-9">
+                                            <span class="name">Todd Shelton</span><br>
+                                            <span class="visible-xs"> <span class="text-muted">(522) 991-3367</span><br></span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="col-xs-12 col-sm-9">
+                                            <span class="name">Rosemary Porter</span><br>
+                                            <span class="visible-xs"> <span class="text-muted">(497) 160-9776</span><br></span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a role="button">Edit Info</a></li>
+                    <li><a role="button">Records</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -55,40 +82,7 @@
     </div>
 
     
-    <div id="contactBin">
-        <div class="row">
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading c-list">
-                        <span class="title">Contacts</span>
-                    </div>
-                    <ul class="list-group" id="contact-list">
-                        <li class="list-group-item">
-                            <div class="col-xs-12 col-sm-9">
-                                <span class="name">Jean Myers</span><br>
-                                <span class="visible-xs"> <span class="text-muted">(477) 792-2822</span><br></span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="col-xs-12 col-sm-9">
-                                <span class="name">Todd Shelton</span><br>
-                                <span class="visible-xs"> <span class="text-muted">(522) 991-3367</span><br></span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="col-xs-12 col-sm-9">
-                                <span class="name">Rosemary Porter</span><br>
-                                <span class="visible-xs"> <span class="text-muted">(497) 160-9776</span><br></span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
 </body>
 
