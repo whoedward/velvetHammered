@@ -1,9 +1,14 @@
 #mainMenu {
     position: fixed;
-    width: 100%;
+    right:0;
+    width:0;
 }
 
 #menuInternal {
     position: relative;
     float: right;
+    
+}
+.navbar-header{
+       
 }
