@@ -10,7 +10,11 @@
 }
 
 #menuList {
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 
-#contactList {
+.list-group-item {
+    padding: 10px 0px;
 }
+
