@@ -15,5 +15,13 @@ body {
 .glyphicon{
     font-size:7em;
 }
+#undo{
+    margin-top:30px;   
+}
+#pop-up{
+    position:fixed;
+    margin-top:80%;
+/*    display:block;*/
+}
 
 

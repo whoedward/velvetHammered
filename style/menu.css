@@ -11,10 +11,9 @@
 
 #menuList {
     border-radius: 5px;
-    border-color: inherit !important;
+    border-style: hidden !important;
 }
 
 .list-group-item {
     padding: 10px 0px;
 }
-
