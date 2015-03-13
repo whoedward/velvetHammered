@@ -60,17 +60,6 @@ function calcDrinks() {
     var weight = Number($('#weight').val());
     var sex = $('input[name=sex]:checked').val()
 
-    if ($('#height').val() === "" || heightFeet < 0) {
-        alert("Please enter a valid height (feet)");
-        return;
-    } else if ($('#height-inches').val() === "" || heightInches < 0) {
-        alert("Please enter a valid height (inches)");
-        return;
-    } else if ($('#weight').val() === "" || weight < 0) {
-        alert("Please enter a valid weight");
-        return;
-    }
-
     // DEBUG PURPOSES
     console.log(heightFeet);
     console.log(heightInches);
@@ -92,7 +81,7 @@ function calcDrinks() {
     var targetDrinksTemp = targetBAC / formula;
     targetDrinksTemp = Math.round(targetDrinksTemp);
 
-    $('#response').text("Limit yourself to " + targetDrinksTemp + " drinks total. You can have 1 more per hour after that.")
+    $('#response').text("Limit yourself to " + targetDrinksTemp + " drinks in the first hour. You can have 1 more per hour after that.")
     $('#forward').show();
 
     targetDrinks = targetDrinksTemp;

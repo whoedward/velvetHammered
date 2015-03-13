@@ -3,9 +3,10 @@
 <html>
 
 <head>
+    <meta charset='utf-8'>
   <title>smartShots</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
     
     <link href="style/menu.css" rel="stylesheet" type="text/css">
     <link href="style/mainScreen.css" rel="stylesheet" type="text/css">
@@ -37,7 +38,7 @@
 
               <label>Gender</label>
               <div class="btn-group btn-group-justified form-group" data-toggle='buttons'>
-                <label class="btn btn-primary active">
+                <label class="btn btn-primary active" id='btn-male'>
                     <input type="radio" name='sex' required value='m' checked>Male
                   </label>
                   <label class="btn btn-primary" id='btn-female'>
@@ -45,7 +46,7 @@
                   </label>
                 </div>
 
-                <label>How Drunk? (based on approximations)</label>
+                <label>When do you want to be notified?</label>
               <div class="btn-group btn-group-justified form-group" data-toggle='buttons'>
                 <label class="btn btn-default btn-amount">
                     <input type="radio" name='amount' required value='0.04'><span class='btn-heading'>Buzzed</span><br>
@@ -61,9 +62,9 @@
                   </label>
                 </div>
 
-                <button type='button' class='btn btn-success' onclick='calcDrinks()'>Calculate!</button>
+                <button id='calculate' type='button' class='btn btn-success' onclick='calcDrinks()'>Calculate!</button>
                 <span id='response'></span>
-                <div><button type='button' id='forward' class='btn btn-success'>Submit to Drink Tracker</button></div>
+                <div id='forward-container'><button type='button' id='forward' class='btn btn-success'>Submit to Drink Tracker</button></div>
             </form>
         </div>
     </div>
