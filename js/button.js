@@ -15,7 +15,8 @@ $(document).ready(function () {
         $("#height-inches").val("");
         $("#weight").val("");
         $("#part2").hide();
-        $("body").css("background-color", "white");
+        $("#response").text("")
+        $("body").css("background-color", "#FCFAE1");
 //        window.score = 1;
         count = 0;
         window.adjust = 10;
@@ -28,15 +29,18 @@ $(document).ready(function () {
     window.adjust = 10;    // amount that each drink increases score
     $("#undo").hide();
     $("#undo").click(function(){
-        if(count >= 1){
+        count--;
+        if(count < window.targetDrinks){
             window.score-= window.adjust;
-            count--;   
             $("#button-text").html(count);
-            $("body").css("background-color", "rgb(" + (255 - 2 * window.score) + "," + (255 - 3 * window.score) + "," + (255 - 3 * window.score) + ")");
+            // $("body").css("background-color", "rgb(" + (255 - 2 * window.score) + "," + (255 - 3 * window.score) + "," + (255 - 3 * window.score) + ")");
+            $("body").css("background-color", "#FCFAE1");
+            $("#pop-up").text("");
         }
-        if(count < 8){
+        if(count >= window.targetDrinks){
             $("#button-text").css("color", "black");
         }
+         $("#button-text").html(count);
     });
     
     $("#singlebutton").click(function () {
@@ -52,7 +56,8 @@ $(document).ready(function () {
         }
         
         if(count == window.targetDrinks){
-               $("#pop-up").text("PLEASE SLOW DOWN CONSUMPTION");
+            $("body").css("background-color", "#C23B22");
+               $("#pop-up").text("Notification: Limit Reached!");
                 $("#pop-up").css("color", "white");
         }
 
@@ -66,7 +71,8 @@ $(document).ready(function () {
             });
         }
         
-        $("body").css("background-color", "rgb(" + (255 - 2 * window.score) + "," + (255 - 3 * window.score) + "," + (255 - 3 * window.score) + ")");
+        // $("body").css("background-color", "rgb(" + (255 - 2 * window.score) + "," + (255 - 3 * window.score) + "," + (255 - 3 * window.score) + ")");
+        
         $("#button-text").html(count);
     });
         

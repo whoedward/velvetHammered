@@ -1,5 +1,4 @@
 body {
-  /*TODO Womp*/
   background-color: #FCFAE1;
 }
 
@@ -9,27 +8,32 @@ body {
 
 #singlebutton{
     position:relative;
-    margin-top:30%;
-    padding:5% 8%;
+    margin-top:10%;
+    padding:5% 5%;
     border-radius:50%;
-    box-shadow: 0 0  100px #888888;
-    border:5px solid black;
+    box-shadow: 0 0 100px #888888;
+    border:3px solid black;
+
 }
 
-.glyphicon{
-    font-size:7em;
+.glyphicon {
+    font-size: 7em;
 }
-#undo{
-    margin-top:30px;   
+
+#undo {
+    margin-top: 20px;
 }
-#resetBtn{
-    margin-left:20px;
-    margin-top:20px;
+
+#resetBtn {
+    margin-left: 20px;
+    margin-top: 20px;
 }
-#pop-up{
-    position:fixed;
-    margin-top:80%;
-/*    display:block;*/
+
+#pop-up {
+    margin: auto;
+    text-align: center;
+    position:relative;
+    margin-top:35px;
 }
 
 .title {
@@ -65,6 +69,9 @@ body {
     font-weight: bold;
 }
 
+#singlebutton {
+    background-color: #22A9C2;
+}
 
 #forward-container {
 }
@@ -75,4 +82,9 @@ body {
 
 label {
     font-size: 1.25em;
+}
+
+.btn-primary {
+    background-color: #22A9C2;
+    border-color: #22A9C2;
 }
